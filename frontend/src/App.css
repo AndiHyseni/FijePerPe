@@ -1,0 +1,4 @@
+/* Component-level styles live in styles/theme.css. Keep this file minimal for overrides. */
+main {
+  display: block;
+}
