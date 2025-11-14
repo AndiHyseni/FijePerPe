@@ -1,23 +1,21 @@
-import React from "react";
 import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero
-          title="Qepim më shumë se veshje, krijojmë përfaqësimin tënd në punë"
-          subtitle="Uniforma të personalizuara për biznese — cilësi, përshtatje dhe dorëzim i shpejtë."
-        />
-        <Features />
-      </main>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

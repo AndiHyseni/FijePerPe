@@ -1,0 +1,37 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 102px;
+  align-content: center;
+  background: var(--brand-burgundy);
+  color: var(--text-light);
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  font-size: 22px;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav a {
+  color: var(--brand-beige);
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 0.9;
+}
+.nav a:hover {
+  opacity: 1;
+}
+
+.contact-us-text {
+  color: var(--brand-beige);
+}

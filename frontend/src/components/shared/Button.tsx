@@ -13,7 +13,7 @@ type ButtonProps = {
 };
 
 const sizeToPadding: Record<NonNullable<ButtonProps["size"]>, string> = {
-  sm: "10px 16px",
+  sm: "13px 19px",
   md: "14px 22px",
   lg: "16px 26px",
 };
@@ -30,7 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
   const classNames = ["btn", `btn--${variant}`, className]
     .filter(Boolean)
     .join(" ");
-  const style = { padding: sizeToPadding[size] };
+  const style = { padding: sizeToPadding[size], gap: "3px" };
 
   if (as === "a") {
     return (

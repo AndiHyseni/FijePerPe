@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+  color: var(--text-light);
+  background: linear-gradient(
+    180deg,
+    var(--brand-sand) 0%,
+    var(--brand-beige) 100%
+  );
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+.hero--with-image {
+  background-size: cover;
+  background-position: center;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(75, 15, 15, 0.78),
+    rgba(75, 15, 15, 0.1)
+  );
+  z-index: 0;
+}
+.hero__content {
+  position: relative;
+  text-align: center;
+  padding: 60px 0;
+  width: 60%;
+  z-index: 2;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  background-image: url("../../assets/images/Qepja.svg");
+  background-repeat: repeat-x;
+  background-size: auto 16px;
+  background-position: center bottom;
+  z-index: 1;
+  pointer-events: none;
+  margin: 0 40px 16px 55px;
+}
+.hero__eyebrow {
+  display: inline-block;
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.hero__title {
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  font-size: clamp(28px, 4vw, 58px);
+  line-height: 1.1;
+  margin: 0 0 60px;
+}
+.hero__subtitle {
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  font-size: clamp(16px, 2.4vw, 24px);
+  margin: 0 0 28px;
+  opacity: 0.95;
+}
+.cta-text {
+  color: var(--text-light);
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  font-size: 22px;
+}

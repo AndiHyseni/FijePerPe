@@ -1,0 +1,6 @@
+.footer {
+  background: var(--brand-burgundy);
+  color: var(--text-light);
+  padding: 32px 0;
+  text-align: center;
+}
