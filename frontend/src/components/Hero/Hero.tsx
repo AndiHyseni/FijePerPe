@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({
   title,
   ctaText = "Shiko shërbimet",
   onCtaClick,
-  backgroundImageUrl,
+  backgroundImageUrl = "/images/banner.svg",
 }) => {
   const style = backgroundImageUrl
     ? { backgroundImage: `url(${backgroundImageUrl})` }

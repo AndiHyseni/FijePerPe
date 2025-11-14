@@ -19,7 +19,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
     Arial, sans-serif;
   color: var(--text-dark);
-  background: var(--brand-cream);
+  background: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
