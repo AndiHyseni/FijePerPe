@@ -1,0 +1,112 @@
+.services {
+  padding: 48px 0 56px;
+  background: var(--background-color);
+}
+.services__title {
+  margin: 0 0 24px;
+  text-align: center;
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  font-size: 42px;
+  color: var(--text-dark);
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Cards */
+.service-card__image {
+  width: 100%;
+  background: #e9e4df; /* placeholder while images are not provided */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  height: 527px;
+  max-height: 527px;
+}
+.service-card--featured .service-card__image {
+  height: 306px;
+  max-height: 306px;
+}
+.service-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.service-card__title {
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.service-card__cta {
+  appearance: none;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--brand-beige);
+  color: var(--brand-burgundy-700);
+  cursor: pointer;
+}
+.service-card__cta:hover {
+  transform: translateY(-1px);
+}
+.service-card__desc {
+  margin: 4px 0 0;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+/* Featured spans all columns on desktop */
+.service-card--featured {
+  grid-column: 1 / -1;
+}
+
+.services__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.services__show-btn {
+  color: var(--brand-burgundy);
+  border: 1px solid var(--brand-burgundy);
+  background: transparent;
+  padding: 3px 20px !important;
+}
+
+.services__products-btn {
+  color: var(--brand-burgundy);
+  border: 1px solid var(--brand-burgundy);
+  background: transparent;
+}
+
+/* Responsive: 2 columns on mobile; featured behaves like a normal card */
+@media (max-width: 900px) {
+  .services {
+    padding: 40px 0 48px;
+  }
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .service-card__image {
+    height: auto;
+    max-height: none;
+    aspect-ratio: 3 / 4;
+  }
+  .service-card--featured {
+    grid-column: auto;
+  }
+  .service-card--featured .service-card__image {
+    height: auto;
+    max-height: none;
+    aspect-ratio: 3 / 4;
+  }
+}

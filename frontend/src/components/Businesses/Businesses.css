@@ -1,0 +1,28 @@
+.businesses {
+  background-color: var(--brand-burgundy);
+  padding: 35px 0;
+}
+
+.businesses .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.businesses .container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.businesses__title {
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--brand-beige);
+  text-align: center;
+  margin: 0;
+}

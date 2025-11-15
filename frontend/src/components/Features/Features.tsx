@@ -7,15 +7,15 @@ const Features: React.FC = () => {
       <div className="container">
         <div className="features__grid">
           <img
-            src="/images/UniformaTePersonalizuara.svg"
+            src="/images/features/UniformaTePersonalizuara.svg"
             alt="Uniforma të personalizuara"
           />
           <img
-            src="/images/MaterialeTeQendrueshme.svg"
+            src="/images/features/MaterialeTeQendrueshme.svg"
             alt="Materiale të qëndrueshme"
           />
           <img
-            src="/images/ProdhimDorezimIShpejte.svg"
+            src="/images/features/ProdhimDorezimIShpejte.svg"
             alt="Prodhim dhe dorëzim i shpejtë"
           />
         </div>
