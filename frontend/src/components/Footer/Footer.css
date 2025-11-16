@@ -131,7 +131,7 @@
   padding-top: 12px;
   display: flex;
   width: 90%;
-  place-self: "anchor-center";
+  place-self: anchor-center;
 }
 .footer__copyright {
   margin: 0;
