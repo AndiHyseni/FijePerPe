@@ -1,0 +1,41 @@
+.clients {
+  padding: 32px 0 40px;
+  background: var(--text-light);
+}
+.clients__title {
+  margin: 0 0 24px;
+  text-align: center;
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  font-size: 42px;
+  color: var(--text-dark);
+}
+.clients__list {
+  display: flex;
+  flex-wrap: wrap; /* stay one row if space, wrap if not */
+  gap: 16px;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+}
+.clients__item {
+  list-style: none;
+  flex: 1 1 140px; /* allows single row when space permits */
+}
+.clients__card {
+  display: block;
+}
+.clients__card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Mobile: force 2 items per row (3 rows for 6 logos) */
+@media (max-width: 900px) {
+  .clients__item {
+    flex: 0 0 calc(50% - 8px);
+    max-width: none;
+  }
+}
