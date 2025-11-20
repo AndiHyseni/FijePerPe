@@ -2,7 +2,7 @@ import React from "react";
 
 type SectionHeaderProps = {
   title: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   align?: "left" | "center";
   className?: string;
   titleClassName?: string;

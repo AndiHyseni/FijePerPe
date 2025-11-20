@@ -6,6 +6,7 @@ import ContactCard from "../../components/shared/ContactCard";
 import Clients from "../../components/Clients/Clients";
 import ShowcaseGallery from "../../components/ShowcaseGallery/ShowcaseGallery";
 import FAQ from "../../components/FAQ/FAQ";
+import { useNavigate } from "react-router-dom";
 
 type Service = {
   key: string;
@@ -15,24 +16,26 @@ type Service = {
 
 const services: Service[] = [
   {
-    key: "embroidery",
+    key: "qendisje-logosh",
     title: "Qëndisje logosh",
     subtitle: "Çdo detaj profesional që zgjat.",
   },
   {
-    key: "apron",
+    key: "kicele",
     title: "Kicelë",
     subtitle: "Praktik, rezistent dhe elegant.",
   },
-  { key: "vest", title: "Jelek", subtitle: "Pamje serioze, rehati e plotë." },
+  { key: "jelek", title: "Jelek", subtitle: "Pamje serioze, rehati e plotë." },
   {
-    key: "shirt",
+    key: "kemishe",
     title: "Këmishë",
     subtitle: "Rehati, cilësi dhe formë perfekte.",
   },
 ];
 
 const ServicesPage: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <main className="services-page">
       <section className="services-page__hero">
@@ -98,7 +101,11 @@ const ServicesPage: React.FC = () => {
           <ul className="services-page__menu" role="list">
             {services.map((item) => (
               <li key={item.key} className="services-page__menu-item">
-                <button type="button" className="services-page__menu-btn">
+                <button
+                  type="button"
+                  onClick={() => navigate(`/services/${item.key}`)}
+                  className="services-page__menu-btn"
+                >
                   <img
                     src={`/images/services/qendisje_services.svg`}
                     alt={item.title}
@@ -110,7 +117,7 @@ const ServicesPage: React.FC = () => {
                     </span>
                     <Button
                       as="a"
-                      href="#list"
+                      href={`/services/${item.key}`}
                       variant="outline"
                       className="services-page__menu-btn-icon"
                     >
@@ -150,7 +157,7 @@ const ServicesPage: React.FC = () => {
             përsosur të brendit.
           </>
         }
-        moreHref="#"
+        moreHref="/services/qendisje-logosh"
         images={[
           "/images/catalogue/Frame%2064.svg",
           "/images/about/maqina.svg",
@@ -164,7 +171,7 @@ const ServicesPage: React.FC = () => {
             tuaj me kualitet!
           </>
         }
-        ctaHref="#contact"
+        ctaHref="/contact"
       />
 
       <ShowcaseGallery
@@ -178,7 +185,7 @@ const ServicesPage: React.FC = () => {
             unike.
           </>
         }
-        moreHref="#"
+        moreHref="/services/kicele"
         images={[
           "/images/catalogue/Frame%2068.svg",
           "/images/catalogue/Frame%2070.svg",
@@ -194,7 +201,7 @@ const ServicesPage: React.FC = () => {
             për biznesin tënd!
           </>
         }
-        ctaHref="#contact"
+        ctaHref="/contact"
       />
 
       <ShowcaseGallery
@@ -208,7 +215,7 @@ const ServicesPage: React.FC = () => {
             klas.
           </>
         }
-        moreHref="#"
+        moreHref="/services/jelek"
         images={[
           "/images/catalogue/Frame%2072.svg",
           "/images/catalogue/Frame%2074.svg",
@@ -224,7 +231,7 @@ const ServicesPage: React.FC = () => {
             për biznesin tënd!
           </>
         }
-        ctaHref="#contact"
+        ctaHref="/contact"
       />
 
       <ShowcaseGallery
@@ -238,7 +245,7 @@ const ServicesPage: React.FC = () => {
             elegancë.
           </>
         }
-        moreHref="#"
+        moreHref="/services/kemishe"
         images={[
           "/images/catalogue/Frame%2076.svg",
           "/images/catalogue/Frame%2078.svg",
@@ -254,7 +261,7 @@ const ServicesPage: React.FC = () => {
             për biznesin tënd!
           </>
         }
-        ctaHref="#contact"
+        ctaHref="/contact"
       />
 
       <FAQ />
