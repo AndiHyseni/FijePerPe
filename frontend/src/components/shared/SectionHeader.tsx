@@ -1,4 +1,5 @@
 import React from "react";
+import "./SectionHeader.css";
 
 type SectionHeaderProps = {
   title: string;
@@ -40,17 +41,13 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     );
   };
 
+  const classNames = ["section-header", className].filter(Boolean).join(" ");
+
   return (
-    <div className={className} style={containerStyle}>
+    <div className={classNames} style={containerStyle}>
       <h1 className={titleClassName}>{title}</h1>
       {renderSubtitle()}
       {children}
-      <img
-        src="/images/bizneset/qepja_negative.svg"
-        alt=""
-        aria-hidden="true"
-        style={{ display: "block", width: "100%" }}
-      />
     </div>
   );
 };

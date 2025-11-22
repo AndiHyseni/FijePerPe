@@ -49,7 +49,11 @@ const About: React.FC = () => {
 
           <ContactCard label="Email" value="info@fijeperpe.com" />
 
-          <ContactCard label="Adresa" value="Qamil Hoxha, Prishtinë" />
+          <ContactCard
+            label="Adresa"
+            value="Qamil Hoxha, Prishtinë"
+            className="about__contacts-last"
+          />
         </div>
       </section>
 

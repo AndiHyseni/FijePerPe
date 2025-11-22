@@ -26,8 +26,10 @@ const FeatureCard: React.FC<FeatureItem> = ({
       <div className="fs-card__icon" aria-hidden="true">
         {icon ? icon : iconSrc ? <img src={iconSrc} alt="" /> : null}
       </div>
-      <h4 className="fs-card__title">{title}</h4>
-      <p className="fs-card__desc">{description}</p>
+      <div className="fs-card__inner">
+        <h4 className="fs-card__title">{title}</h4>
+        <p className="fs-card__desc">{description}</p>
+      </div>
     </article>
   );
 };

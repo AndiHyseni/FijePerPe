@@ -1,0 +1,68 @@
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px;
+  border: 2px solid var(--brand-burgundy);
+  border-radius: 12px;
+  justify-content: space-between;
+}
+.contact-card__icon {
+  color: var(--brand-burgundy);
+}
+.contact-card__label {
+  font-size: 28px;
+  font-weight: 600;
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  color: var(--text-dark);
+}
+.contact-card__value {
+  font-size: 28px;
+  font-weight: 500;
+  font-style: var(--font-style);
+  font-family: var(--font-family);
+  color: var(--text-dark);
+}
+.contact-card__inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 8px;
+  }
+  .contact-card:last-child {
+    grid-column: 1 / -1;
+  }
+  .contact-card__label,
+  .contact-card__value {
+    font-size: 18px;
+  }
+  .contact-card__icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+  .contact-card__icon img {
+    width: 20px;
+    height: auto;
+  }
+  .contact-card__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .contact-card.about__contacts-last .contact-card__inner {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-direction: row;
+  }
+}

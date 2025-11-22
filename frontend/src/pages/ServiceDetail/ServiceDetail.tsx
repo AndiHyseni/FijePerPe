@@ -152,7 +152,11 @@ const ServiceDetail: React.FC = () => {
         <div className="container service-detail__contacts-grid">
           <ContactCard label="Numri" value="+383 48 766 300" />
           <ContactCard label="Email" value="info@fijeperpe.com" />
-          <ContactCard label="Adresa" value="Qamil Hoxha, Prishtinë" />
+          <ContactCard
+            label="Adresa"
+            value="Qamil Hoxha, Prishtinë"
+            className="about__contacts-last"
+          />
         </div>
       </section>
 

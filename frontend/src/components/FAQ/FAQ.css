@@ -55,3 +55,25 @@
   font-family: var(--font-family);
   opacity: 0.7;
 }
+
+@media (max-width: 768px) {
+  .faq {
+    padding: 30px 0 30px;
+  }
+  .faq__title {
+    font-size: 24px;
+  }
+  .faq__button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  .faq__icon {
+    font-size: 16px;
+  }
+  .faq__answer {
+    font-size: 14px;
+  }
+  .faq__list {
+    gap: 5px;
+  }
+}

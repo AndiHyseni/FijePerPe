@@ -1,0 +1,17 @@
+.section-header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 16px;
+  background-image: url("../../assets/images/qepja_negative.svg");
+  background-repeat: repeat-x;
+  background-size: auto 17px;
+  background-position: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .section-header::after {
+    background-size: auto 14px;
+  }
+}

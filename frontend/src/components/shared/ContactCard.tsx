@@ -1,4 +1,5 @@
 import React from "react";
+import "./ContactCard.css";
 
 export type ContactCardProps = {
   label: string;
@@ -13,7 +14,7 @@ export const ContactCard: React.FC<ContactCardProps> = ({
 }) => {
   return (
     <div className={["contact-card", className].filter(Boolean).join(" ")}>
-      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+      <div className="contact-card__inner">
         <div className="contact-card__label">{label}:</div>
         <div className="contact-card__value">{value}</div>
       </div>

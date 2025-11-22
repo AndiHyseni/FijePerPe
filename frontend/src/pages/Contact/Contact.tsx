@@ -49,7 +49,11 @@ const Contact: React.FC = () => {
         <div className="container contact__cards-grid">
           <ContactCard label="Numri" value="+383 48 766 300" />
           <ContactCard label="Email" value="info@fijeperpe.com" />
-          <ContactCard label="Adresa" value="Qamil Hoxha, Prishtinë" />
+          <ContactCard
+            label="Adresa"
+            value="Qamil Hoxha, Prishtinë"
+            className="about__contacts-last"
+          />
         </div>
       </section>
 
