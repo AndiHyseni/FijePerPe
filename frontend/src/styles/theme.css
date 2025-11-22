@@ -19,6 +19,13 @@
   padding: 0 40px;
 }
 
+/* Mobile container padding */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
 /* Buttons */
 .btn {
   appearance: none;
@@ -61,4 +68,16 @@
 }
 .btn--outline:hover {
   background: rgba(255, 255, 255, 0.12);
+}
+
+/* Mobile button styles */
+@media (max-width: 768px) {
+  .btn {
+    padding: 8px 26px !important;
+    font-size: 16px;
+  }
+  .btn svg {
+    width: 16px;
+    height: 16px;
+  }
 }

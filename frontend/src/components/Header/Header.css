@@ -35,3 +35,77 @@
 .contact-us-text {
   color: var(--brand-beige);
 }
+
+/* Hamburger menu button */
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--brand-beige);
+  transition: all 0.3s ease;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .header {
+    height: 74px;
+    font-size: 18px;
+  }
+  .header__inner {
+    padding: 0 10px;
+    flex-direction: row-reverse;
+  }
+  .header__hamburger {
+    display: flex;
+    order: -1;
+  }
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--brand-burgundy);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+  }
+  .nav--open {
+    transform: translateX(0);
+  }
+  .nav a {
+    font-size: 18px;
+    width: 100%;
+    padding: 8px 0;
+  }
+  .header__logo {
+    flex: 1;
+  }
+  .header__logo img {
+    height: 40px;
+    width: auto;
+  }
+  .header__contact-btn {
+    display: none;
+  }
+}

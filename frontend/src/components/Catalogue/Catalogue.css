@@ -61,17 +61,27 @@
 }
 
 /* Mobile */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .catalogue {
-    padding: 40px 0 48px;
+    padding: 40px 0 40px;
+  }
+  .catalogue__title {
+    font-size: 24px;
   }
   .catalogue__grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "a a"
+      "a c"
       "b b"
-      "c d"
-      "e e";
-    gap: 18px;
+      "d e";
+    gap: 10px;
+  }
+  .catalogue__tile {
+    height: auto;
+    aspect-ratio: 2;
+    min-height: 200px;
+  }
+  .catalogue__tile--c {
+    aspect-ratio: 2 / 1;
   }
 }

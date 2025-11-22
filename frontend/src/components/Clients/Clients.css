@@ -33,9 +33,13 @@
 }
 
 /* Mobile: force 2 items per row (3 rows for 6 logos) */
-@media (max-width: 900px) {
-  .clients__item {
-    flex: 0 0 calc(50% - 8px);
-    max-width: none;
+@media (max-width: 768px) {
+  .clients__title {
+    font-size: 24px;
+    margin: 0 0 16px;
+  }
+
+  .clients__list {
+    gap: 10px;
   }
 }

@@ -60,9 +60,7 @@ const Services: React.FC = () => {
                 style={{ backgroundImage: `url(${item.imageUrl})` }}
               />
               <div className="service-card__meta">
-                <div
-                  style={{ display: "flex", flexDirection: "row", gap: "10px" }}
-                >
+                <div className="service-card__text">
                   <h3 className="service-card__title">{item.title}</h3>
                   <p className="service-card__desc">{item.subtitle}</p>
                 </div>

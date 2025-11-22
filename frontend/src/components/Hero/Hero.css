@@ -68,3 +68,36 @@
   font-family: var(--font-family);
   font-size: 22px;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 600px;
+    padding: 40px 0;
+  }
+  .hero__content {
+    width: 90%;
+    padding: 40px 20px;
+  }
+  .hero__eyebrow {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 0 0 32px;
+  }
+  .hero__subtitle {
+    font-size: clamp(14px, 3vw, 18px);
+    margin: 0 0 20px;
+  }
+  .cta-text {
+    font-size: 16px;
+  }
+  .hero::after {
+    margin: 0 14px 8px 15px;
+    height: 12px;
+    background-size: auto 12px;
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../shared/Button";
 import "./Header.css";
@@ -8,15 +8,33 @@ type HeaderProps = {
 };
 
 const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="header">
       <div className="container header__inner">
-        <nav className="nav" aria-label="Main">
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contact Us</Link>
-          <Link to="/about">About Us</Link>
+        <button
+          className="header__hamburger"
+          aria-label="Toggle menu"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <img src="/images/icons/hamburger.svg" alt="Menu" />
+        </button>
+        <nav
+          className={`nav ${isMenuOpen ? "nav--open" : ""}`}
+          aria-label="Main"
+        >
+          <Link to="/" onClick={() => setIsMenuOpen(false)}>
+            Home
+          </Link>
+          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+            Contact Us
+          </Link>
+          <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+            About Us
+          </Link>
         </nav>
-        <Link to="/">
+        <Link to="/" className="header__logo">
           <img src="/logos/fije_logo.svg" alt="FIJE PER PE logo" />
         </Link>
         <Button
@@ -25,6 +43,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
           variant="outline"
           size="sm"
           onClick={onContactClick}
+          className="header__contact-btn"
         >
           <svg
             width="20"
