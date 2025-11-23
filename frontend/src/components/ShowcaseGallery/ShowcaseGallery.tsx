@@ -40,13 +40,7 @@ const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({
 
   return (
     <section className={["sg", className].filter(Boolean).join(" ")}>
-      <div className="container">
-        <img
-          src="/images/bizneset/qepja_negative.svg"
-          alt={title}
-          className="sg__icon"
-          style={{ width: "100%", marginBottom: "24px" }}
-        />
+      <div className="container sg__container">
         <div className="sg__header">
           <div className="sg__header-content">
             <h2 className="sg__title">{title}</h2>
@@ -54,7 +48,13 @@ const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({
           </div>
           <Button as="a" href={moreHref} variant="light" className="sg__more">
             Shiko më shumë
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <svg
+              className="sg__more-icon"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
               <path
                 d="M5 12h14M13 5l7 7-7 7"
                 stroke="currentColor"

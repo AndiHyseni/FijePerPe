@@ -8,7 +8,7 @@
   color: var(--brand-burgundy);
   border: 1px solid var(--brand-burgundy);
   background: transparent;
-  padding: 14px 20px !important;
+  padding: 14px 20px;
   margin-bottom: 36px;
   width: fit-content;
 }
@@ -76,15 +76,35 @@
   background: transparent;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .service-detail__hero {
+    padding: 32px 0 20px;
+  }
+  .service-detail__contact-btn {
+    margin-bottom: 0;
+  }
   .service-detail__contacts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 10px;
   }
   .service-detail__grid {
     grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+  .service-detail__cta {
+    padding: 0px 10px 16px;
   }
   .service-detail__cta-inner {
     grid-template-columns: 1fr;
     justify-items: start;
+    padding: 30px 51px;
+  }
+  .service-detail__cta-title {
+    font-size: 28px;
+  }
+
+  .service-detail__cta-subtitle {
+    font-size: 16px;
   }
 }

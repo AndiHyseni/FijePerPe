@@ -168,16 +168,38 @@
   .about__subtitle br {
     display: none;
   }
+  .services-page__feature {
+    padding: 0 0 44px;
+  }
   .services-page__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
   }
+  .services-page__contacts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 10px;
+  }
   .services-page__feature-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .services-page__image,
   .services-page__card--featured .services-page__image {
     height: 3.2in; /* compact mobile height; uses physical unit to remain steady */
     max-height: none;
+  }
+  .services-page__feature .section-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0 10px;
+  }
+  .services-page__section-title {
+    font-size: 28px;
+    margin: 0px 0px 16px;
+  }
+  .services-page__section-subtitle {
+    font-size: 16px;
   }
 }

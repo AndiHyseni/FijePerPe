@@ -2,6 +2,17 @@
   padding: 50px 0 50px;
   background: var(--background-color);
 }
+.sg__container::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 16px;
+  background-image: url("../../assets/images/qepja_negative.svg");
+  background-repeat: repeat-x;
+  background-size: auto 16px;
+  background-position: center;
+  margin-bottom: 24px;
+}
 .sg__header {
   display: flex;
   align-items: center;
@@ -93,7 +104,15 @@
   border: 1px solid var(--background-color);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .sg {
+    padding: 20px 0 20px;
+  }
+  .sg__container::before {
+    background-size: auto 15px;
+    height: 14px;
+    margin-bottom: 20px;
+  }
   .sg__grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -103,6 +122,33 @@
   }
   .sg__a,
   .sg__d {
-    min-height: 300px;
+    max-height: 300px;
+  }
+  .sg__title {
+    font-size: 28px;
+  }
+  .sg__subtitle {
+    font-size: 14px;
+  }
+  .sg__header-content {
+    gap: 6px;
+    flex-direction: column;
+  }
+  .sg__cta {
+    gap: 6px;
+    padding: 24px 16px;
+  }
+  .sg__cta-title {
+    font-size: 28px;
+  }
+  .sg__cta-subtitle {
+    font-size: 16px;
+  }
+  .sg__more {
+    padding: 5px 18px !important;
+    font-size: 16px;
+  }
+  .sg__more-icon {
+    width: 30px !important;
   }
 }
