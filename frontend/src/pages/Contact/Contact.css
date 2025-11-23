@@ -159,6 +159,12 @@
 }
 
 @media (max-width: 768px) {
+  .contact__hero {
+    padding: 32px 0 20px;
+  }
+  .contact__contact-btn {
+    margin-bottom: 0;
+  }
   .contact__cards {
     padding: 24px 0;
   }

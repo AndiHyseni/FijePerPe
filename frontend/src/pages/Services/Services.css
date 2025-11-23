@@ -158,7 +158,16 @@
   font-size: 14px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .services-page__hero {
+    padding: 32px 0 20px;
+  }
+  .services-page__contact-btn {
+    margin-bottom: 0;
+  }
+  .about__subtitle br {
+    display: none;
+  }
   .services-page__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
