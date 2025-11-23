@@ -101,6 +101,7 @@ const Contact: React.FC = () => {
             <label className="form__checkbox">
               <input
                 type="checkbox"
+                className="form__checkbox-input"
                 style={{ width: "16px", height: "16px", margin: "0px" }}
               />{" "}
               <span>You agree to our friendly privacy policy.</span>
