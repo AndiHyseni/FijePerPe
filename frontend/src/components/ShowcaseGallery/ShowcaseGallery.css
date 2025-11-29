@@ -76,7 +76,8 @@
 .sg__cta {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: center;
+  grid-template-rows: auto auto;
+  align-items: start;
   gap: 12px;
   margin-top: 16px;
   background: var(--brand-burgundy);
@@ -90,6 +91,8 @@
   font-size: 48px;
   color: var(--background-color);
   font-weight: 600;
+  grid-column: 1;
+  grid-row: 1;
 }
 .sg__cta-subtitle {
   font-size: 20px;
@@ -98,8 +101,13 @@
   font-family: var(--font-family);
   margin: 0;
   font-weight: 400;
+  grid-column: 1;
+  grid-row: 2;
 }
 .sg__cta-btn {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
   color: var(--background-color);
   border: 1px solid var(--background-color);
 }
@@ -116,39 +124,75 @@
   .sg__grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "a a"
-      "b c"
-      "d d";
+      "a b"
+      "c d";
   }
   .sg__a,
   .sg__d {
-    max-height: 300px;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  .sg__img {
+    max-height: 200px;
+  }
+  .sg__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 12px;
+  }
+  .sg__header-content {
+    display: contents;
   }
   .sg__title {
     font-size: 28px;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    margin: 0;
   }
   .sg__subtitle {
     font-size: 14px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: left;
+    margin: 0;
   }
-  .sg__header-content {
-    gap: 6px;
-    flex-direction: column;
+  .sg__subtitle br {
+    display: none;
+  }
+  .sg__more {
+    padding: 10px 12px !important;
+    width: 60px;
+    height: 24px;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0 !important;
   }
   .sg__cta {
-    gap: 6px;
     padding: 24px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 6px;
   }
   .sg__cta-title {
-    font-size: 28px;
+    font-size: 22px;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+  }
+  .sg__cta-title br {
+    display: none;
   }
   .sg__cta-subtitle {
     font-size: 16px;
-  }
-  .sg__more {
-    padding: 5px 18px !important;
-    font-size: 16px;
-  }
-  .sg__more-icon {
-    width: 30px !important;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: left;
   }
 }

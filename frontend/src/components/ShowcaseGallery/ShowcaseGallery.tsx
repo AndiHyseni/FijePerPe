@@ -77,10 +77,10 @@ const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({
           <div className="sg__cta-title">
             {ctaTitle}
             <br />
-            <p className="sg__cta-subtitle">
-              Na kontakto dhe merr oferten për biznesin tënd.
-            </p>
           </div>
+          <p className="sg__cta-subtitle">
+            Na kontakto dhe merr oferten për biznesin tënd.
+          </p>
 
           <Button
             as="a"

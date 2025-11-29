@@ -19,13 +19,6 @@
   padding: 0 40px;
 }
 
-/* Mobile container padding */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 10px;
-  }
-}
-
 /* Buttons */
 .btn {
   appearance: none;
@@ -72,8 +65,11 @@
 
 /* Mobile button styles */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
   .btn {
-    padding: 8px 26px !important;
+    padding: 10px 26px !important;
     font-size: 16px;
   }
   .btn svg {

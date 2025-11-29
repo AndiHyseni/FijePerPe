@@ -85,66 +85,62 @@ const ServicesPage: React.FC = () => {
       </section>
 
       <section id="list" className="services-page__feature">
-        <div className="section-container">
-          <h2 className="services-page__section-title">
-            Cilësi, ngjyrë, materiale dhe <br /> makineri profesionale!
-          </h2>
-          <p className="services-page__section-subtitle">
-            Nga materiali deri te qepja çdo detaj është i <br /> realizuar me
-            mjeshtëri, qepje profesionale, <br /> materiale cilësore dhe kujdes
-            që bën dallimin.
-          </p>
-        </div>
         <div className="container services-page__feature-grid">
+          <div className="section-container">
+            <h2 className="services-page__section-title">
+              Cilësi, ngjyrë, materiale dhe <br /> makineri profesionale!
+            </h2>
+            <p className="services-page__section-subtitle">
+              Nga materiali deri te qepja çdo detaj është i <br /> realizuar me
+              mjeshtëri, qepje profesionale, <br /> materiale cilësore dhe
+              kujdes që bën dallimin.
+            </p>
+          </div>
           <img
             className="services-page__feature-image"
             src="/images/catalogue/Frame%2062.svg"
             alt="Qëndisje logosh"
           />
-
-          <ul className="services-page__menu" role="list">
-            {services.map((item) => (
-              <li key={item.key} className="services-page__menu-item">
-                <button
-                  type="button"
-                  onClick={() => navigate(`/services/${item.key}`)}
-                  className="services-page__menu-btn"
-                >
-                  <img
-                    src={`/images/services/qendisje_services.svg`}
-                    alt={item.title}
-                    style={{ width: "100%" }}
-                  />
-                  <div className="services-page__menu-content">
-                    <span className="services-page__menu-title">
-                      {item.title}
-                    </span>
-                    <Button
-                      as="a"
-                      href={`/services/${item.key}`}
-                      variant="outline"
-                      className="services-page__menu-btn-icon"
-                    >
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
+          <div className="services-page__menu-container">
+            <ul className="services-page__menu" role="list">
+              {services.map((item) => (
+                <li key={item.key} className="services-page__menu-item">
+                  <button
+                    type="button"
+                    onClick={() => navigate(`/services/${item.key}`)}
+                    className="services-page__menu-btn"
+                  >
+                    <div className="services-page__menu-content">
+                      <span className="services-page__menu-title">
+                        {item.title}
+                      </span>
+                      <Button
+                        as="a"
+                        href={`/services/${item.key}`}
+                        variant="outline"
+                        className="services-page__menu-btn-icon"
                       >
-                        <path
-                          d="M5 12h14M13 5l7 7-7 7"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </Button>
-                  </div>
-                </button>
-              </li>
-            ))}
-          </ul>
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M5 12h14M13 5l7 7-7 7"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </Button>
+                    </div>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
