@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import "./Reviews.css";
 
 type Review = {
@@ -9,41 +10,6 @@ type Review = {
   verified?: boolean;
   rating?: number;
 };
-
-const reviews: Review[] = [
-  {
-    id: "1",
-    company: "Sacor Coffee & More",
-    city: "New York City",
-    text: "I'm blown away by the quality and style of the clothes I received. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-    verified: true,
-    rating: 5,
-  },
-  {
-    id: "2",
-    company: "La Tarte",
-    city: "New York City",
-    text: "Quality materials and excellent craftsmanship. The team delivered exactly what we needed, on time and with care to detail.",
-    verified: true,
-    rating: 5,
-  },
-  {
-    id: "3",
-    company: "Sacor Coffee & More",
-    city: "New York City",
-    text: "Great communication and beautiful work. We’ll definitely collaborate again for future uniforms.",
-    verified: true,
-    rating: 5,
-  },
-  {
-    id: "4",
-    company: "Seven Gym",
-    city: "New York City",
-    text: "Comfortable, durable and stylish – our staff loves the new uniforms. Highly recommended.",
-    verified: true,
-    rating: 5,
-  },
-];
 
 const Star: React.FC = () => (
   <svg
@@ -77,6 +43,7 @@ const VerifiedDot: React.FC = () => (
 );
 
 const Reviews: React.FC = () => {
+  const { t } = useTranslation();
   const trackRef = useRef<HTMLDivElement | null>(null);
   const scrollByViewport = (dir: "left" | "right") => {
     const el = trackRef.current;
@@ -84,11 +51,47 @@ const Reviews: React.FC = () => {
     const amount = dir === "left" ? -el.clientWidth : el.clientWidth;
     el.scrollBy({ left: amount, behavior: "smooth" });
   };
+
+  const reviews: Review[] = [
+    {
+      id: "1",
+      company: t("reviews.items.1.company"),
+      city: t("reviews.items.1.city"),
+      text: t("reviews.items.1.text"),
+      verified: true,
+      rating: 5,
+    },
+    {
+      id: "2",
+      company: t("reviews.items.2.company"),
+      city: t("reviews.items.2.city"),
+      text: t("reviews.items.2.text"),
+      verified: true,
+      rating: 5,
+    },
+    {
+      id: "3",
+      company: t("reviews.items.3.company"),
+      city: t("reviews.items.3.city"),
+      text: t("reviews.items.3.text"),
+      verified: true,
+      rating: 5,
+    },
+    {
+      id: "4",
+      company: t("reviews.items.4.company"),
+      city: t("reviews.items.4.city"),
+      text: t("reviews.items.4.text"),
+      verified: true,
+      rating: 5,
+    },
+  ];
+
   return (
     <section className="reviews" aria-labelledby="reviews-title">
       <div className="container">
         <h2 id="reviews-title" className="reviews__title">
-          Çfarë thonë klientët tanë
+          {t("reviews.title")}
         </h2>
 
         <div className="reviews__track" ref={trackRef}>
@@ -108,7 +111,10 @@ const Reviews: React.FC = () => {
               <div className="review-card__company">
                 <span>{r.company}</span>
                 {r.verified ? (
-                  <span className="review-card__verified" title="Verified">
+                  <span
+                    className="review-card__verified"
+                    title={t("reviews.verified")}
+                  >
                     <VerifiedDot />
                   </span>
                 ) : null}
@@ -122,7 +128,7 @@ const Reviews: React.FC = () => {
           <button
             className="reviews__nav-btn"
             type="button"
-            aria-label="Previous reviews"
+            aria-label={t("reviews.previous")}
             onClick={() => scrollByViewport("left")}
           >
             ←
@@ -130,7 +136,7 @@ const Reviews: React.FC = () => {
           <button
             className="reviews__nav-btn"
             type="button"
-            aria-label="Next reviews"
+            aria-label={t("reviews.next")}
             onClick={() => scrollByViewport("right")}
           >
             →

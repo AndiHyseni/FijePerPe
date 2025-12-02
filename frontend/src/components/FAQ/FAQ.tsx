@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./FAQ.css";
 
 type FAQItem = {
@@ -11,43 +12,39 @@ type FAQProps = {
   items?: FAQItem[];
 };
 
-const defaultItems: FAQItem[] = [
-  {
-    question: "Sa kohë zgjat dorëzimi i porosisë?",
-    answer:
-      "Nëse produktet janë të gatshme, dorëzimi bëhet brenda 24–48 orëve. Për porosi të personalizuara, koha përshtatet sipas kërkesës.",
-  },
-  {
-    question: "A ndihmoni me përzgjedhjen e madhësive?",
-    answer:
-      "Po, ju udhëzojmë për përshtatje të saktë sipas stafit dhe stilit të punës.",
-  },
-  {
-    question: "Sa kohë merr prodhimi i një kicele?",
-    answer:
-      "Zakonisht 2–5 ditë pune, varësisht nga sasia dhe personalizimet e kërkuara.",
-  },
-  {
-    question: "A ofroni uniforma të personalizuara me logo apo emër?",
-    answer:
-      "Po, qëndisim logon/emrin tuaj në disa pozicione dhe ngjyra sipas brendit.",
-  },
-  {
-    question: "A mund të zgjidhet dizajni nga ekipi juaj?",
-    answer:
-      "Po. Ekipi ynë i dizajnit ju ndihmon me përzgjedhjen ose krijimin e dizajnit. Ne propozojmë mockup‑e, përshtatim ngjyrat, materialet dhe pozicionet e logos sipas identitetit të biznesit tuaj.",
-  },
-  {
-    question: "A mund të porosis në distancë, pa ardhur fizikisht?",
-    answer:
-      "Po. Të gjitha porositë mund t’i realizojmë online: komunikojmë për masat dhe preferencat, dërgojmë foto/mostra sipas mundësisë, konfirmojmë dizajnin dhe organizojmë pagesën e dorëzimin me korrier.",
-  },
-];
+const FAQ: React.FC<FAQProps> = ({ title, items }) => {
+  const { t } = useTranslation();
 
-const FAQ: React.FC<FAQProps> = ({
-  title = "Pyetjet më të shpeshta",
-  items = defaultItems,
-}) => {
+  const defaultTitle = t("faq.title");
+  const defaultItems: FAQItem[] = [
+    {
+      question: t("faq.items.delivery.question"),
+      answer: t("faq.items.delivery.answer"),
+    },
+    {
+      question: t("faq.items.sizes.question"),
+      answer: t("faq.items.sizes.answer"),
+    },
+    {
+      question: t("faq.items.production.question"),
+      answer: t("faq.items.production.answer"),
+    },
+    {
+      question: t("faq.items.customization.question"),
+      answer: t("faq.items.customization.answer"),
+    },
+    {
+      question: t("faq.items.design.question"),
+      answer: t("faq.items.design.answer"),
+    },
+    {
+      question: t("faq.items.remote.question"),
+      answer: t("faq.items.remote.answer"),
+    },
+  ];
+
+  const finalTitle = title || defaultTitle;
+  const finalItems = items || defaultItems;
   const [openIndex, setOpenIndex] = useState<number>(0);
   const toggle = (idx: number) =>
     setOpenIndex((prev) => (prev === idx ? -1 : idx));
@@ -55,9 +52,9 @@ const FAQ: React.FC<FAQProps> = ({
   return (
     <section className="faq">
       <div className="container">
-        <h2 className="faq__title">{title}</h2>
+        <h2 className="faq__title">{finalTitle}</h2>
         <ul className="faq__list" role="list">
-          {items.map((it, idx) => {
+          {finalItems.map((it, idx) => {
             const isOpen = idx === openIndex;
             return (
               <li

@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "home": "Home",
+    "contact": "Contact Us",
+    "about": "About Us"
+  },
+  "hero": {
+    "eyebrow": "FIJE PËR PE",
+    "title": "We sew more than clothes, we create your professional representation",
+    "cta": "View Services"
+  },
+  "common": {
+    "contactUs": "Contact Us",
+    "contactNow": "Contact Now",
+    "viewServices": "View Services",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressValue": "Qamil Hoxha, Prishtina",
+    "phoneValue": "+383 48 766 300",
+    "emailValue": "info@fijeperpe.com"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We combine design, quality and professionalism in every stitch,\nFor uniforms that look good and last long.",
+    "sectionTitle": "About Us",
+    "description": "Fije për Pe is a business founded in Prishtina, started from a passion for sewing and professional design. We create and customize uniforms for businesses that require quality, style and functionality.\n\nEvery product is sewn with quality materials, colors that last and modern machinery for perfect finishing. We believe that uniforms are not just clothing; they are part of every business's identity.",
+    "bandTitle": "From aprons, shirts to <br /> vests every detail sewn thread by thread",
+    "bandSubtitle": "Customized for every profession that requires style.",
+    "closingTitle": "Quality, color, materials and <br /> professional machinery!",
+    "features": {
+      "colorTitle": "Color that lasts",
+      "colorDescription": "We use color-resistant materials that maintain strong and fresh colors, even after many washes and daily use.",
+      "logoTitle": "Logo customization",
+      "logoDescription": "Thanks to modern sewing machinery, we offer durable and precise logos that make the uniform part of your business identity.",
+      "materialTitle": "Quality materials",
+      "materialDescription": "Every piece is carefully selected to ensure comfort in wear and high quality that is felt in every touch.",
+      "workTitle": "Workmanship with professional standards",
+      "workDescription": "Every product goes through the hands of craftsmen who give it perfect shape, combining style with durability in every stitch."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Contact us for orders, collaborations or questions,\n our team is ready to help you choose the best for your business.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "firstNamePlaceholder": "John",
+      "lastNamePlaceholder": "Doe",
+      "emailPlaceholder": "johndoe@email.com",
+      "phonePlaceholder": "+383 00 000 000",
+      "subjectPlaceholder": "Leave us a message...",
+      "privacy": "You agree to our friendly privacy policy.",
+      "submit": "Send Message",
+      "successMessage": "Message sent! (demo)"
+    },
+    "visit": {
+      "title": "Visit Us in Prishtina",
+      "description": "We are located in the heart of the city, ready to help you with any order or customization. Come see up close the sewing process and the quality of our products."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer professional sewing of vests, shirts and\n aprons, as well as high-quality logo embroidery.",
+    "sectionTitle": "Quality, color, materials and <br /> professional machinery!",
+    "sectionSubtitle": "From material to sewing, every detail is <br /> realized with craftsmanship, professional sewing, <br /> quality materials and care that makes the difference.",
+    "list": {
+      "qendisje-logosh": {
+        "title": "Logo Embroidery",
+        "subtitle": "Every professional detail that lasts."
+      },
+      "kicele": {
+        "title": "Aprons",
+        "subtitle": "Practical, resistant and elegant."
+      },
+      "jelek": {
+        "title": "Vests",
+        "subtitle": "Serious look, full comfort."
+      },
+      "kemishe": {
+        "title": "Shirts",
+        "subtitle": "Comfort, quality and perfect fit."
+      }
+    },
+    "gallery": {
+      "qendisje-logosh": {
+        "title": "Logo Embroidery",
+        "subtitle": "At Fije për Pe, logo embroidery is done with modern machinery and quality threads,\nwith precision that guarantees quality, durability and perfect brand representation.",
+        "ctaTitle": "Embroider your <span style=\"color: #EF8C16; font-style: italic;\">logo</span> with quality!"
+      },
+      "kicele": {
+        "title": "Aprons",
+        "subtitle": "At Fije për Pe, we offer aprons for every type of business from restaurants to shops, with the possibility\nof customization according to your brand, for a professional and unique presentation.",
+        "ctaTitle": "Customize your <span style=\"color: #EF8C16; font-style: italic;\">apron</span> for your business!"
+      },
+      "jelek": {
+        "title": "Vests",
+        "subtitle": "At Fije për Pe, our vests combine customization, unique style and strong materials\nfor a professional look that lasts long and represents the brand with class.",
+        "ctaTitle": "Customize <span style=\"color: #EF8C16; font-style: italic;\">vests</span> for your business!"
+      },
+      "kemishe": {
+        "title": "Shirts",
+        "subtitle": "At Fije për Pe, we offer customized shirts for every type of business, with unique style,\nquality materials and durability that represent the brand with elegance.",
+        "ctaTitle": "Customize <span style=\"color: #EF8C16; font-style: italic;\">shirts</span> for your business!"
+      }
+    },
+    "detail": {
+      "kicele": {
+        "title": "Aprons",
+        "subtitle": "Aprons sewn with precision, quality materials and colors\nthat last for long-lasting use.",
+        "ctaTitle": "Customize <span style=\"color: #EF8C16; font-style: italic;\">uniforms</span> for your business!",
+        "ctaSubtitle": "Contact us and get the offer for your business."
+      },
+      "jelek": {
+        "title": "Vests",
+        "subtitle": "Vests with style and functionality, combining customization and durability.",
+        "ctaTitle": "Customize <span style=\"color: #EF8C16; font-style: italic;\">uniforms</span> for your business!",
+        "ctaSubtitle": "Contact us and get the offer for your business."
+      },
+      "kemishe": {
+        "title": "Shirts",
+        "subtitle": "Customized shirts for a professional presentation with quality materials.",
+        "ctaTitle": "Customize <span style=\"color: #EF8C16; font-style: italic;\">uniforms</span> for your business!",
+        "ctaSubtitle": "Contact us and get the offer for your business."
+      },
+      "qendisje-logosh": {
+        "title": "Logo Embroidery",
+        "subtitle": "Embroidery with modern machinery and quality threads for lasting quality.",
+        "ctaTitle": "Embroider your <span style=\"color: #EF8C16; font-style: italic;\">logo</span> with quality!",
+        "ctaSubtitle": "Contact us and get the offer for your business."
+      }
+    }
+  },
+  "features": {
+    "ariaLabel": "Why choose FIJE PER PE",
+    "customUniforms": "Customized uniforms",
+    "durableMaterials": "Durable materials",
+    "fastProduction": "Fast production and delivery"
+  },
+  "homeServices": {
+    "title": "Our Services",
+    "viewProducts": "View Products"
+  },
+  "businesses": {
+    "title": "For every brand, for every business"
+  },
+  "catalogue": {
+    "title": "Sewing with dedication in every detail",
+    "viewCatalogue": "View Catalogue"
+  },
+  "clients": {
+    "title": "Our Clients"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "delivery": {
+        "question": "How long does order delivery take?",
+        "answer": "If products are ready, delivery is made within 24–48 hours. For customized orders, time is adjusted according to requirements."
+      },
+      "sizes": {
+        "question": "Do you help with size selection?",
+        "answer": "Yes, we guide you for accurate fitting according to staff and work style."
+      },
+      "production": {
+        "question": "How long does apron production take?",
+        "answer": "Usually 2–5 working days, depending on quantity and required customizations."
+      },
+      "customization": {
+        "question": "Do you offer customized uniforms with logo or name?",
+        "answer": "Yes, we embroider your logo/name in several positions and colors according to your brand."
+      },
+      "design": {
+        "question": "Can the design be chosen by your team?",
+        "answer": "Yes. Our design team helps you with the selection or creation of the design. We propose mockups, adjust colors, materials and logo positions according to your business identity."
+      },
+      "remote": {
+        "question": "Can I order remotely, without coming physically?",
+        "answer": "Yes. We can fulfill all orders online: we communicate about measurements and preferences, send photos/samples when possible, confirm the design and organize payment and delivery by courier."
+      }
+    }
+  },
+  "reviews": {
+    "title": "What Our Clients Say",
+    "previous": "Previous reviews",
+    "next": "Next reviews",
+    "verified": "Verified",
+    "items": {
+      "1": {
+        "company": "Sacor Coffee & More",
+        "city": "New York City",
+        "text": "I'm blown away by the quality and style of the clothes I received. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."
+      },
+      "2": {
+        "company": "La Tarte",
+        "city": "New York City",
+        "text": "Quality materials and excellent craftsmanship. The team delivered exactly what we needed, on time and with care to detail."
+      },
+      "3": {
+        "company": "Sacor Coffee & More",
+        "city": "New York City",
+        "text": "Great communication and beautiful work. We'll definitely collaborate again for future uniforms."
+      },
+      "4": {
+        "company": "Seven Gym",
+        "city": "New York City",
+        "text": "Comfortable, durable and stylish – our staff loves the new uniforms. Highly recommended."
+      }
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Sign up for personalized offers!",
+      "emailPlaceholder": "Enter your email address",
+      "emailLabel": "Email address"
+    },
+    "tagline": "Your uniforms, sewn thread by thread.",
+    "social": "Social",
+    "sections": {
+      "company": {
+        "heading": "Company",
+        "links": {
+          "about": "About Us",
+          "services": "What We Offer",
+          "projects": "Our Projects",
+          "careers": "Careers"
+        }
+      },
+      "help": {
+        "heading": "Help",
+        "links": {
+          "support": "Customer Support",
+          "delivery": "Delivery Details",
+          "terms": "Terms of Use",
+          "privacy": "Privacy Policy"
+        }
+      },
+      "faq": {
+        "heading": "Frequently Asked Questions",
+        "links": {
+          "account": "Your Account",
+          "management": "Management",
+          "orders": "Orders",
+          "payments": "Payments"
+        }
+      },
+      "resources": {
+        "heading": "Resources",
+        "links": {
+          "ebooks": "Free E-books",
+          "guide": "Development Guide",
+          "blog": "Tips Blog",
+          "youtube": "Our YouTube List"
+        }
+      }
+    },
+    "copyright": "fijeperpe © 2000–{{year}}, All Rights Reserved"
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./ShowcaseGallery.css";
 import Button from "../shared/Button";
 
@@ -36,6 +37,7 @@ const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({
   ctaHref,
   className,
 }) => {
+  const { t } = useTranslation();
   const [a, b, c, d] = images;
 
   return (
@@ -47,7 +49,7 @@ const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({
             <p className="sg__subtitle">{subtitle}</p>
           </div>
           <Button as="a" href={moreHref} variant="light" className="sg__more">
-            Shiko më shumë
+            {t("common.viewServices")}
             <svg
               className="sg__more-icon"
               width="18"
@@ -79,7 +81,7 @@ const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({
             <br />
           </div>
           <p className="sg__cta-subtitle">
-            Na kontakto dhe merr oferten për biznesin tënd.
+            {t("services.detail.kicele.ctaSubtitle")}
           </p>
 
           <Button
@@ -88,7 +90,7 @@ const ShowcaseGallery: React.FC<ShowcaseGalleryProps> = ({
             variant="outline"
             className="sg__cta-btn"
           >
-            Kontakto tani
+            {t("common.contactNow")}
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path
                 d="M5 12h14M13 5l7 7-7 7"

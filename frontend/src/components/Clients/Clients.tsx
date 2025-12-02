@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Clients.css";
 
 const logos = [
@@ -11,11 +12,12 @@ const logos = [
 ];
 
 const Clients: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="clients" aria-labelledby="clients-title">
       <div className="container">
         <h2 id="clients-title" className="clients__title">
-          Klientët tanë
+          {t("clients.title")}
         </h2>
         <ul className="clients__list" role="list">
           {logos.map((logo) => (

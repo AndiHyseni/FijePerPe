@@ -1,47 +1,44 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Button from "../shared/Button";
 import "./Services.css";
 
 type ServiceItem = {
   key: string;
-  title: string;
-  subtitle: string;
+  translationKey: string;
   imageUrl: string;
 };
 
 const items: ServiceItem[] = [
   {
     key: "featured",
-    title: "Qëndisje logosh",
-    subtitle: "Çdo detaj profesional që zgjat.",
+    translationKey: "qendisje-logosh",
     imageUrl: "/images/services/QendisjeLogosh.svg",
   },
   {
     key: "apron",
-    title: "Kicelë",
-    subtitle: "Praktik, rezistent dhe elegant.",
+    translationKey: "kicele",
     imageUrl: "/images/services/Kicele.svg",
   },
   {
     key: "vest",
-    title: "Jelek",
-    subtitle: "Pamje serioze, rehati e plotë.",
+    translationKey: "jelek",
     imageUrl: "/images/services/Jelek.svg",
   },
   {
     key: "shirt",
-    title: "Këmishë",
-    subtitle: "Rehati, cilësi dhe formë perfekte.",
+    translationKey: "kemishe",
     imageUrl: "/images/services/Kemishe.svg",
   },
 ];
 
 const Services: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="services" aria-labelledby="services-title">
       <div className="container">
         <h2 id="services-title" className="services__title">
-          Shërbimet tona
+          {t("homeServices.title")}
         </h2>
         <div className="services__grid">
           {items.map((item, index) => (
@@ -61,8 +58,12 @@ const Services: React.FC = () => {
               />
               <div className="service-card__meta">
                 <div className="service-card__text">
-                  <h3 className="service-card__title">{item.title}</h3>
-                  <p className="service-card__desc">{item.subtitle}</p>
+                  <h3 className="service-card__title">
+                    {t(`services.list.${item.translationKey}.title`)}
+                  </h3>
+                  <p className="service-card__desc">
+                    {t(`services.list.${item.translationKey}.subtitle`)}
+                  </p>
                 </div>
                 <Button
                   as="a"
@@ -99,7 +100,7 @@ const Services: React.FC = () => {
             size="lg"
             className="services__products-btn"
           >
-            Shiko produktet
+            {t("homeServices.viewProducts")}
             <svg
               width="18"
               height="18"

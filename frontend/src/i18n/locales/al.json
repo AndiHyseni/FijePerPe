@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "home": "Ballina",
+    "contact": "Na kontaktoni",
+    "about": "Rreth nesh"
+  },
+  "hero": {
+    "eyebrow": "FIJE PËR PE",
+    "title": "Qepim më shumë se veshje, krijojmë përfaqësimin tënd në punë",
+    "cta": "Shiko shërbimet"
+  },
+  "common": {
+    "contactUs": "Na kontaktoni",
+    "contactNow": "Kontakto tani",
+    "viewServices": "Shiko shërbimet",
+    "phone": "Numri",
+    "email": "Email",
+    "address": "Adresa",
+    "addressValue": "Qamil Hoxha, Prishtinë",
+    "phoneValue": "+383 48 766 300",
+    "emailValue": "info@fijeperpe.com"
+  },
+  "about": {
+    "title": "Rreth nesh",
+    "subtitle": "Kombinojmë dizajnin, cilësinë dhe profesionalizmin në qdo qepje,\nPër uniforma që duken bukur dhe qëndrojnë gjatë.",
+    "sectionTitle": "Rreth nesh",
+    "description": "Fije për Pe është një biznes i themeluar në Prishtinë, i nisur nga pasioni për qepje dhe dizajn profesional. Ne krijojmë dhe personalizojmë uniforma për biznese që kërkojnë cilësi, stil dhe funksionalitet. \n\nÇdo produkt qepet me materiale cilësore, ngjyra që qëndrojnë dhe makineri moderne për perfundim të përsosur. Besojmë se uniforma nuk është thjesht veshje; është pjesë e identitetit të çdo biznesi.",
+    "bandTitle": "Nga kicelja, këmisha e deri tek <br /> jeleku çdo detaj i qepur fije për pe",
+    "bandSubtitle": "Të personalizuara për çdo profesion që kërkon stil.",
+    "closingTitle": "Cilësi, ngjyrë, materiale dhe <br /> makineri profesionale!",
+    "features": {
+      "colorTitle": "Ngjyrë që qëndron",
+      "colorDescription": "Përdorim materiale me ngjyrë rezistente që ruajnë ngjyrën e fortë dhe të freskët, edhe pas shumë larjesh dhe përdorimesh të përditshme.",
+      "logoTitle": "Personalizim me logo",
+      "logoDescription": "Falë makinerive moderne për qepje, ofrojmë logo të qëndrueshme dhe të sakta që e bëjnë uniformën pjesë të identitetit të biznesit tënd.",
+      "materialTitle": "Materiale cilësore",
+      "materialDescription": "Çdo copë përzgjidhet me kujdes për të siguruar rehati në veshje dhe cilësi të lartë  cilësi që ndihet në çdo prekje.",
+      "workTitle": "Punëdore me standard profesional",
+      "workDescription": "Çdo produkt kalon nëpër duar mjeshtërish që i japin formë perfekte, duke bashkuar stilin me qëndrueshmërinë në çdo qepje."
+    }
+  },
+  "contact": {
+    "title": "Na kontaktoni",
+    "subtitle": "Na kontaktoni për porosi, bashkëpunime ose pyetje,\n ekipi ynë është gati t'ju ndihmojë me zgjedhjen e më të mirës për biznesin tuaj.",
+    "form": {
+      "firstName": "Emri",
+      "lastName": "Mbiemri",
+      "email": "Email",
+      "phone": "Numri",
+      "subject": "Subject",
+      "firstNamePlaceholder": "John",
+      "lastNamePlaceholder": "Doe",
+      "emailPlaceholder": "johndoe@email.com",
+      "phonePlaceholder": "+383 00 000 000",
+      "subjectPlaceholder": "Leave us a message...",
+      "privacy": "You agree to our friendly privacy policy.",
+      "submit": "Dërgo mesazhin",
+      "successMessage": "Mesazhi u dërgua! (demo)"
+    },
+    "visit": {
+      "title": "Na vizitoni në Prishtinë",
+      "description": "Jemi të vendosur në zemër të qytetit, gati për t'ju ndihmuar me çdo porosi apo personalizim. Ejani të shihni nga afër procesin e qepjes dhe cilësinë e produkteve tona."
+    }
+  },
+  "services": {
+    "title": "Shërbimet tona",
+    "subtitle": "Ofrojmë qepje profesionale të jelekëve, këmishave dhe\n kiceleve, si edhe qendisje logosh me cilësi të lartë.",
+    "sectionTitle": "Cilësi, ngjyrë, materiale dhe <br /> makineri profesionale!",
+    "sectionSubtitle": "Nga materiali deri te qepja çdo detaj është i <br /> realizuar me mjeshtëri, qepje profesionale, <br /> materiale cilësore dhe kujdes që bën dallimin.",
+    "list": {
+      "qendisje-logosh": {
+        "title": "Qëndisje logosh",
+        "subtitle": "Çdo detaj profesional që zgjat."
+      },
+      "kicele": {
+        "title": "Kicelë",
+        "subtitle": "Praktik, rezistent dhe elegant."
+      },
+      "jelek": {
+        "title": "Jelek",
+        "subtitle": "Pamje serioze, rehati e plotë."
+      },
+      "kemishe": {
+        "title": "Këmishë",
+        "subtitle": "Rehati, cilësi dhe formë perfekte."
+      }
+    },
+    "gallery": {
+      "qendisje-logosh": {
+        "title": "Qëndisje logosh",
+        "subtitle": "Te Fije për Pe, qendisja e logove bëhet me makineri moderne dhe fije cilësore,\nme precizion që garanton cilësi, qëndrueshmëri dhe përfaqësim të përsosur të brendit.",
+        "ctaTitle": "Qëndise <span style=\"color: #EF8C16; font-style: italic;\">logon</span> tuaj me kualitet!"
+      },
+      "kicele": {
+        "title": "Kicele",
+        "subtitle": "Te Fije për Pe, ofrojmë kicele për çdo lloj biznesi nga restorantet te dyqanet, me mundësi\npersonalizimi sipas brendit tuaj, për një paraqitje profesionale dhe unike.",
+        "ctaTitle": "Personalizo <span style=\"color: #EF8C16; font-style: italic;\">kicelën</span> për biznesin tënd!"
+      },
+      "jelek": {
+        "title": "Jelek",
+        "subtitle": "Te Fije për Pe, jelekët tanë kombinojnë personalizimin, stilin unik dhe materialet e forta\npër një pamje profesionale që zgjat gjatë dhe përfaqëson brendin me klas.",
+        "ctaTitle": "Personalizo <span style=\"color: #EF8C16; font-style: italic;\">jelekë</span> për biznesin tënd!"
+      },
+      "kemishe": {
+        "title": "Këmishë",
+        "subtitle": "Ne Fije për Pe, ofrojmë këmisha të personalizuara për çdo lloj biznesi, me stil unik,\nmateriale cilësore dhe qëndrueshmëri që përfaqësojnë brendin me elegancë.",
+        "ctaTitle": "Personalizo <span style=\"color: #EF8C16; font-style: italic;\">këmishë</span> për biznesin tënd!"
+      }
+    },
+    "detail": {
+      "kicele": {
+        "title": "Kicele",
+        "subtitle": "Kecelë të qepura me precizion, materiale cilësore dhe ngjyra\nqë qëndrojnë për përdorim që zgjat.",
+        "ctaTitle": "Personalizo <span style=\"color: #EF8C16; font-style: italic;\">uniformat</span> për biznesin tënd!",
+        "ctaSubtitle": "Na kontakto dhe merr oferten për biznesin tënd."
+      },
+      "jelek": {
+        "title": "Jelek",
+        "subtitle": "Jelekë me stil dhe funksionalitet, që kombinojnë personalizimin dhe qëndrueshmërinë.",
+        "ctaTitle": "Personalizo <span style=\"color: #EF8C16; font-style: italic;\">uniformat</span> për biznesin tënd!",
+        "ctaSubtitle": "Na kontakto dhe merr oferten për biznesin tënd."
+      },
+      "kemishe": {
+        "title": "Këmishë",
+        "subtitle": "Këmisha të personalizuara për një paraqitje profesionale me materiale cilësore.",
+        "ctaTitle": "Personalizo <span style=\"color: #EF8C16; font-style: italic;\">uniformat</span> për biznesin tënd!",
+        "ctaSubtitle": "Na kontakto dhe merr oferten për biznesin tënd."
+      },
+      "qendisje-logosh": {
+        "title": "Qëndisje logosh",
+        "subtitle": "Qëndisje me makineri moderne dhe fije cilësore për cilësi që zgjat.",
+        "ctaTitle": "Qëndise <span style=\"color: #EF8C16; font-style: italic;\">logon</span> tuaj me kualitet!",
+        "ctaSubtitle": "Na kontakto dhe merr oferten për biznesin tënd."
+      }
+    }
+  },
+  "features": {
+    "ariaLabel": "Pse të zgjidhni FIJE PER PE",
+    "customUniforms": "Uniforma të personalizuara",
+    "durableMaterials": "Materiale të qëndrueshme",
+    "fastProduction": "Prodhim dhe dorëzim i shpejtë"
+  },
+  "homeServices": {
+    "title": "Shërbimet tona",
+    "viewProducts": "Shiko produktet"
+  },
+  "businesses": {
+    "title": "Për çdo brend, për çdo biznes"
+  },
+  "catalogue": {
+    "title": "Qepje me përkushtim në çdo detaj",
+    "viewCatalogue": "Shiko katalogun"
+  },
+  "clients": {
+    "title": "Klientët tanë"
+  },
+  "faq": {
+    "title": "Pyetjet më të shpeshta",
+    "items": {
+      "delivery": {
+        "question": "Sa kohë zgjat dorëzimi i porosisë?",
+        "answer": "Nëse produktet janë të gatshme, dorëzimi bëhet brenda 24–48 orëve. Për porosi të personalizuara, koha përshtatet sipas kërkesës."
+      },
+      "sizes": {
+        "question": "A ndihmoni me përzgjedhjen e madhësive?",
+        "answer": "Po, ju udhëzojmë për përshtatje të saktë sipas stafit dhe stilit të punës."
+      },
+      "production": {
+        "question": "Sa kohë merr prodhimi i një kicele?",
+        "answer": "Zakonisht 2–5 ditë pune, varësisht nga sasia dhe personalizimet e kërkuara."
+      },
+      "customization": {
+        "question": "A ofroni uniforma të personalizuara me logo apo emër?",
+        "answer": "Po, qëndisim logon/emrin tuaj në disa pozicione dhe ngjyra sipas brendit."
+      },
+      "design": {
+        "question": "A mund të zgjidhet dizajni nga ekipi juaj?",
+        "answer": "Po. Ekipi ynë i dizajnit ju ndihmon me përzgjedhjen ose krijimin e dizajnit. Ne propozojmë mockup‑e, përshtatim ngjyrat, materialet dhe pozicionet e logos sipas identitetit të biznesit tuaj."
+      },
+      "remote": {
+        "question": "A mund të porosis në distancë, pa ardhur fizikisht?",
+        "answer": "Po. Të gjitha porositë mund t'i realizojmë online: komunikojmë për masat dhe preferencat, dërgojmë foto/mostra sipas mundësisë, konfirmojmë dizajnin dhe organizojmë pagesën e dorëzimin me korrier."
+      }
+    }
+  },
+  "reviews": {
+    "title": "Çfarë thonë klientët tanë",
+    "previous": "Shiko vlerësimet e mëparshme",
+    "next": "Shiko vlerësimet e ardhshme",
+    "verified": "I verifikuar",
+    "items": {
+      "1": {
+        "company": "Sacor Coffee & More",
+        "city": "New York City",
+        "text": "Jam e mahnitur nga cilësia dhe stili i rrobave që mora. Nga veshjet e përditshme te fustanet elegante, çdo veshje që kam blerë i ka tejkaluar pritjet e mia."
+      },
+      "2": {
+        "company": "La Tarte",
+        "city": "New York City",
+        "text": "Materiale cilësore dhe mjeshtëri e shkëlqyer. Ekipi dorëzoi pikërisht atë që na nevojitej, në kohë dhe me kujdes deri në detaje."
+      },
+      "3": {
+        "company": "Sacor Coffee & More",
+        "city": "New York City",
+        "text": "Komunikim i shkëlqyer dhe punë e mrekullueshme. Patjetër që do të bashkëpunojmë përsëri për uniformat e ardhshme."
+      },
+      "4": {
+        "company": "Seven Gym",
+        "city": "New York City",
+        "text": "Të rehatshme, të qëndrueshme dhe me stil – stafi ynë i adhuron uniformat e reja. I rekomandojmë shumë."
+      }
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Regjistrohu për oferta të personalizuara!",
+      "emailPlaceholder": "Shënoni emailin tuaj",
+      "emailLabel": "Emaili"
+    },
+    "tagline": "Uniforma juaj, qepur fije për pe.",
+    "social": "Social",
+    "sections": {
+      "company": {
+        "heading": "Kompania",
+        "links": {
+          "about": "Rreth nesh",
+          "services": "Çfarë ofrojmë",
+          "projects": "Projektet tona",
+          "careers": "Kariera"
+        }
+      },
+      "help": {
+        "heading": "Ndihmë",
+        "links": {
+          "support": "Mbështetje për klientë",
+          "delivery": "Detajet e dorëzimit",
+          "terms": "Kushtet e përdorimit",
+          "privacy": "Politika e privatësisë"
+        }
+      },
+      "faq": {
+        "heading": "Pyetje të shpeshta",
+        "links": {
+          "account": "Llogaria juaj",
+          "management": "Menaxhimi",
+          "orders": "Porositë",
+          "payments": "Pagesat"
+        }
+      },
+      "resources": {
+        "heading": "Burimet",
+        "links": {
+          "ebooks": "Libra elektronikë falas",
+          "guide": "Udhëzues për zhvillim",
+          "blog": "Blog me udhëzime",
+          "youtube": "Lista jonë në YouTube"
+        }
+      }
+    },
+    "copyright": "fijeperpe © 2000–{{year}}, Të gjitha të drejtat e rezervuara"
+  }
+}

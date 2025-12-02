@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Button from "../shared/Button";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import "./Header.css";
 
 type HeaderProps = {
@@ -9,56 +11,63 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <header className="header">
       <div className="container header__inner">
-        <button
-          className="header__hamburger"
-          aria-label="Toggle menu"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <img src="/images/icons/hamburger.svg" alt="Menu" />
-        </button>
+        <div className="header__mobile-left">
+          <LanguageSwitcher className="header__language-mobile" />
+          <button
+            className="header__hamburger"
+            aria-label="Toggle menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <img src="/images/icons/hamburger.svg" alt="Menu" />
+          </button>
+        </div>
         <nav
           className={`nav ${isMenuOpen ? "nav--open" : ""}`}
           aria-label="Main"
         >
           <Link to="/" onClick={() => setIsMenuOpen(false)}>
-            Home
+            {t("nav.home")}
           </Link>
           <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-            Contact Us
+            {t("nav.contact")}
           </Link>
           <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-            About Us
+            {t("nav.about")}
           </Link>
         </nav>
         <Link to="/" className="header__logo">
           <img src="/logos/fije_logo.svg" alt="FIJE PER PE logo" />
         </Link>
-        <Button
-          as="a"
-          href="/contact"
-          variant="outline"
-          size="sm"
-          onClick={onContactClick}
-          className="header__contact-btn"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
+        <div className="header__actions">
+          <LanguageSwitcher className="header__language-desktop" />
+          <Button
+            as="a"
+            href="/contact"
+            variant="outline"
+            size="sm"
+            onClick={onContactClick}
+            className="header__contact-btn"
           >
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.72a2 2 0 0 1 2.11-.45c.76.24 1.55.42 2.36.54a2 2 0 0 1 1.72 2.64Z"
-              fill="#F7E0C6"
-            />
-          </svg>
-          <span className="contact-us-text">Contact Us</span>
-        </Button>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.72-1.72a2 2 0 0 1 2.11-.45c.76.24 1.55.42 2.36.54a2 2 0 0 1 1.72 2.64Z"
+                fill="#F7E0C6"
+              />
+            </svg>
+            <span className="contact-us-text">{t("nav.contact")}</span>
+          </Button>
+        </div>
       </div>
     </header>
   );

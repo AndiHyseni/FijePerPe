@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Contact.css";
 import Button from "../../components/shared/Button";
 import SectionHeader from "../../components/shared/SectionHeader";
@@ -6,9 +7,10 @@ import ContactCard from "../../components/shared/ContactCard";
 import FAQ from "../../components/FAQ/FAQ";
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    alert("Mesazhi u dërgua! (demo)");
+    alert(t("contact.form.successMessage"));
   };
 
   return (
@@ -16,10 +18,8 @@ const Contact: React.FC = () => {
       <section className="contact__hero">
         <div className="container">
           <SectionHeader
-            title="Na kontaktoni"
-            subtitle={
-              "Na kontaktoni për porosi, bashkëpunime ose pyetje,\n ekipi ynë është gati t’ju ndihmojë me zgjedhjen e më të mirës për biznesin tuaj."
-            }
+            title={t("contact.title")}
+            subtitle={t("contact.subtitle")}
             align="center"
             titleClassName="about__title"
             subtitleClassName="about__subtitle"
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
               variant="light"
               className="contact__contact-btn"
             >
-              Kontakto tani
+              {t("common.contactNow")}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M5 12h14M13 5l7 7-7 7"
@@ -47,11 +47,17 @@ const Contact: React.FC = () => {
 
       <section className="contact__cards">
         <div className="container contact__cards-grid">
-          <ContactCard label="Numri" value="+383 48 766 300" />
-          <ContactCard label="Email" value="info@fijeperpe.com" />
           <ContactCard
-            label="Adresa"
-            value="Qamil Hoxha, Prishtinë"
+            label={t("common.phone")}
+            value={t("common.phoneValue")}
+          />
+          <ContactCard
+            label={t("common.email")}
+            value={t("common.emailValue")}
+          />
+          <ContactCard
+            label={t("common.address")}
+            value={t("common.addressValue")}
             className="about__contacts-last"
           />
         </div>
@@ -62,40 +68,49 @@ const Contact: React.FC = () => {
           <form className="form" onSubmit={onSubmit}>
             <div className="form__row">
               <label className="form__field">
-                <span>Emri</span>
+                <span>{t("contact.form.firstName")}</span>
                 <input
                   type="text"
                   name="firstName"
-                  placeholder="John"
+                  placeholder={t("contact.form.firstNamePlaceholder")}
                   required
                 />
               </label>
               <label className="form__field">
-                <span>Mbiemri</span>
-                <input type="text" name="lastName" placeholder="Doe" required />
+                <span>{t("contact.form.lastName")}</span>
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder={t("contact.form.lastNamePlaceholder")}
+                  required
+                />
               </label>
             </div>
             <div className="form__row">
               <label className="form__field">
-                <span>Email</span>
+                <span>{t("contact.form.email")}</span>
                 <input
                   type="email"
                   name="email"
-                  placeholder="johndoe@email.com"
+                  placeholder={t("contact.form.emailPlaceholder")}
                   required
                 />
               </label>
               <label className="form__field">
-                <span>Numri</span>
-                <input type="tel" name="phone" placeholder="+383 00 000 000" />
+                <span>{t("contact.form.phone")}</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder={t("contact.form.phonePlaceholder")}
+                />
               </label>
             </div>
             <label className="form__field">
-              <span>Subject</span>
+              <span>{t("contact.form.subject")}</span>
               <textarea
                 name="subject"
                 rows={6}
-                placeholder="Leave us a message..."
+                placeholder={t("contact.form.subjectPlaceholder")}
               />
             </label>
             <label className="form__checkbox">
@@ -104,10 +119,10 @@ const Contact: React.FC = () => {
                 className="form__checkbox-input"
                 style={{ width: "16px", height: "16px", margin: "0px" }}
               />{" "}
-              <span>You agree to our friendly privacy policy.</span>
+              <span>{t("contact.form.privacy")}</span>
             </label>
             <Button variant="outline" size="lg" className="contact__submit-btn">
-              Dërgo mesazhin
+              {t("contact.form.submit")}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M5 12h14M13 5l7 7-7 7"
@@ -125,15 +140,14 @@ const Contact: React.FC = () => {
       <section className="contact__visit">
         <div className="container contact__visit-grid">
           <div className="contact__visit-card">
-            <h3 className="contact__visit-title">Na vizitoni në Prishtinë</h3>
-            <p>
-              Jemi të vendosur në zemër të qytetit, gati për t’ju ndihmuar{" "}
-              <br />
-              me çdo porosi apo personalizim. Ejani të shihni nga afër <br />
-              procesin e qepjes dhe cilësinë e produkteve tona.
-            </p>
+            <h3 className="contact__visit-title">{t("contact.visit.title")}</h3>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t("contact.visit.description").replace(/\n/g, "<br />"),
+              }}
+            />
             <Button variant="outline" size="md" className="contact__visit-btn">
-              Kontakto tani
+              {t("common.contactNow")}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M5 12h14M13 5l7 7-7 7"

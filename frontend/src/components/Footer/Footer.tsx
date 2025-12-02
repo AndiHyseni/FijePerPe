@@ -1,14 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Footer.css";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   const year = new Date().getFullYear();
   return (
     <footer>
       <section className="footer__newsletter">
         <div className="container footer__newsletter-inner">
           <h3 className="footer__newsletter-title">
-            Regjistrohu për oferta të personalizuara!
+            {t("footer.newsletter.title")}
           </h3>
           <form
             className="footer__newsletter-form"
@@ -33,8 +35,8 @@ const Footer: React.FC = () => {
               </span>
               <input
                 type="email"
-                placeholder="Enter your email address"
-                aria-label="Email address"
+                placeholder={t("footer.newsletter.emailPlaceholder")}
+                aria-label={t("footer.newsletter.emailLabel")}
               />
             </div>
           </form>
@@ -49,8 +51,8 @@ const Footer: React.FC = () => {
               alt="FIJE PER PE"
               className="footer__logo"
             />
-            <p className="footer__tagline">Uniforma juaj, qepur fije për pe.</p>
-            <div className="footer__socials" aria-label="Social">
+            <p className="footer__tagline">{t("footer.tagline")}</p>
+            <div className="footer__socials" aria-label={t("footer.social")}>
               <a href="#" aria-label="Facebook">
                 <svg width="22.5" height="22.5" viewBox="0 0 24 24" fill="none">
                   <path
@@ -82,73 +84,81 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer__col">
-            <h4 className="footer__heading">Kompania</h4>
+            <h4 className="footer__heading">
+              {t("footer.sections.company.heading")}
+            </h4>
             <ul className="footer__links" role="list">
               <li>
-                <a href="#">Rreth nesh</a>
+                <a href="#">{t("footer.sections.company.links.about")}</a>
               </li>
               <li>
-                <a href="#">Çfarë ofrojmë</a>
+                <a href="#">{t("footer.sections.company.links.services")}</a>
               </li>
               <li>
-                <a href="#">Projektet tona</a>
+                <a href="#">{t("footer.sections.company.links.projects")}</a>
               </li>
               <li>
-                <a href="#">Kariera</a>
+                <a href="#">{t("footer.sections.company.links.careers")}</a>
               </li>
             </ul>
           </div>
 
           <div className="footer__col">
-            <h4 className="footer__heading">Ndihmë</h4>
+            <h4 className="footer__heading">
+              {t("footer.sections.help.heading")}
+            </h4>
             <ul className="footer__links" role="list">
               <li>
-                <a href="#">Mbështetje për klientë</a>
+                <a href="#">{t("footer.sections.help.links.support")}</a>
               </li>
               <li>
-                <a href="#">Detajet e dorëzimit</a>
+                <a href="#">{t("footer.sections.help.links.delivery")}</a>
               </li>
               <li>
-                <a href="#">Kushtet e përdorimit</a>
+                <a href="#">{t("footer.sections.help.links.terms")}</a>
               </li>
               <li>
-                <a href="#">Politika e privatësisë</a>
+                <a href="#">{t("footer.sections.help.links.privacy")}</a>
               </li>
             </ul>
           </div>
 
           <div className="footer__col">
-            <h4 className="footer__heading">Pyetje të shpeshta</h4>
+            <h4 className="footer__heading">
+              {t("footer.sections.faq.heading")}
+            </h4>
             <ul className="footer__links" role="list">
               <li>
-                <a href="#">Llogaria juaj</a>
+                <a href="#">{t("footer.sections.faq.links.account")}</a>
               </li>
               <li>
-                <a href="#">Menaxhimi</a>
+                <a href="#">{t("footer.sections.faq.links.management")}</a>
               </li>
               <li>
-                <a href="#">Porositë</a>
+                <a href="#">{t("footer.sections.faq.links.orders")}</a>
               </li>
               <li>
-                <a href="#">Pagesat</a>
+                <a href="#">{t("footer.sections.faq.links.payments")}</a>
               </li>
             </ul>
           </div>
 
           <div className="footer__col">
-            <h4 className="footer__heading">Burimet</h4>
+            <h4 className="footer__heading">
+              {t("footer.sections.resources.heading")}
+            </h4>
             <ul className="footer__links" role="list">
               <li>
-                <a href="#">Libra elektronikë falas</a>
+                <a href="#">{t("footer.sections.resources.links.ebooks")}</a>
               </li>
               <li>
-                <a href="#">Udhëzues për zhvillim</a>
+                <a href="#">{t("footer.sections.resources.links.guide")}</a>
               </li>
               <li>
-                <a href="#">Blog me udhëzime</a>
+                <a href="#">{t("footer.sections.resources.links.blog")}</a>
               </li>
               <li>
-                <a href="#">Lista jonë në YouTube</a>
+                <a href="#">{t("footer.sections.resources.links.youtube")}</a>
               </li>
             </ul>
           </div>
@@ -157,7 +167,7 @@ const Footer: React.FC = () => {
         <div className="footer__bottom">
           <div className="container">
             <p className="footer__copyright">
-              fijeperpe © 2000–{year}, All Rights Reserved
+              {t("footer.copyright", { year })}
             </p>
           </div>
         </div>

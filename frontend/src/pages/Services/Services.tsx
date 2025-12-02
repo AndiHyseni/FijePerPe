@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Services.css";
 import SectionHeader from "../../components/shared/SectionHeader";
 import Button from "../../components/shared/Button";
@@ -10,41 +11,29 @@ import { useNavigate } from "react-router-dom";
 
 type Service = {
   key: string;
-  title: string;
-  subtitle: string;
+  titleKey: string;
+  subtitleKey: string;
 };
 
-const services: Service[] = [
-  {
-    key: "qendisje-logosh",
-    title: "Qëndisje logosh",
-    subtitle: "Çdo detaj profesional që zgjat.",
-  },
-  {
-    key: "kicele",
-    title: "Kicelë",
-    subtitle: "Praktik, rezistent dhe elegant.",
-  },
-  { key: "jelek", title: "Jelek", subtitle: "Pamje serioze, rehati e plotë." },
-  {
-    key: "kemishe",
-    title: "Këmishë",
-    subtitle: "Rehati, cilësi dhe formë perfekte.",
-  },
-];
+const serviceKeys = ["qendisje-logosh", "kicele", "jelek", "kemishe"];
 
 const ServicesPage: React.FC = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
+
+  const services: Service[] = serviceKeys.map((key) => ({
+    key,
+    titleKey: `services.list.${key}.title`,
+    subtitleKey: `services.list.${key}.subtitle`,
+  }));
 
   return (
     <main className="services-page">
       <section className="services-page__hero">
         <div className="container">
           <SectionHeader
-            title="Shërbimet tona"
-            subtitle={
-              "Ofrojmë qepje profesionale të jelekëve, këmishave dhe\n kiceleve, si edhe qendisje logosh me cilësi të lartë."
-            }
+            title={t("services.title")}
+            subtitle={t("services.subtitle")}
             align="center"
             titleClassName="about__title"
             subtitleClassName="about__subtitle"
@@ -55,7 +44,7 @@ const ServicesPage: React.FC = () => {
               variant="light"
               className="services-page__contact-btn"
             >
-              Shiko shërbimet
+              {t("common.viewServices")}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M5 12h14M13 5l7 7-7 7"
@@ -72,13 +61,19 @@ const ServicesPage: React.FC = () => {
 
       <section className="services-page__contacts" id="contact">
         <div className="container services-page__contacts-grid">
-          <ContactCard label="Numri" value="+383 48 766 300" />
-
-          <ContactCard label="Email" value="info@fijeperpe.com" />
+          <ContactCard
+            label={t("common.phone")}
+            value={t("common.phoneValue")}
+          />
 
           <ContactCard
-            label="Adresa"
-            value="Qamil Hoxha, Prishtinë"
+            label={t("common.email")}
+            value={t("common.emailValue")}
+          />
+
+          <ContactCard
+            label={t("common.address")}
+            value={t("common.addressValue")}
             className="about__contacts-last"
           />
         </div>
@@ -87,14 +82,16 @@ const ServicesPage: React.FC = () => {
       <section id="list" className="services-page__feature">
         <div className="container services-page__feature-grid">
           <div className="section-container">
-            <h2 className="services-page__section-title">
-              Cilësi, ngjyrë, materiale dhe <br /> makineri profesionale!
-            </h2>
-            <p className="services-page__section-subtitle">
-              Nga materiali deri te qepja çdo detaj është i <br /> realizuar me
-              mjeshtëri, qepje profesionale, <br /> materiale cilësore dhe
-              kujdes që bën dallimin.
-            </p>
+            <h2
+              className="services-page__section-title"
+              dangerouslySetInnerHTML={{ __html: t("services.sectionTitle") }}
+            />
+            <p
+              className="services-page__section-subtitle"
+              dangerouslySetInnerHTML={{
+                __html: t("services.sectionSubtitle"),
+              }}
+            />
           </div>
           <img
             className="services-page__feature-image"
@@ -112,7 +109,7 @@ const ServicesPage: React.FC = () => {
                   >
                     <div className="services-page__menu-content">
                       <span className="services-page__menu-title">
-                        {item.title}
+                        {t(item.titleKey)}
                       </span>
                       <Button
                         as="a"
@@ -147,15 +144,16 @@ const ServicesPage: React.FC = () => {
       <Clients />
 
       <ShowcaseGallery
-        title="Qëndisje logosh"
+        title={t("services.gallery.qendisje-logosh.title")}
         subtitle={
-          <>
-            Te Fije për Pe, qendisja e logove bëhet me makineri moderne dhe fije
-            cilësore,
-            <br />
-            me precizion që garanton cilësi, qëndrueshmëri dhe përfaqësim të
-            përsosur të brendit.
-          </>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("services.gallery.qendisje-logosh.subtitle").replace(
+                /\n/g,
+                "<br />"
+              ),
+            }}
+          />
         }
         moreHref="/services/qendisje-logosh"
         images={[
@@ -165,25 +163,26 @@ const ServicesPage: React.FC = () => {
           "/images/catalogue/Frame%2067.svg",
         ]}
         ctaTitle={
-          <>
-            Qëndise{" "}
-            <span style={{ color: "#EF8C16", fontStyle: "italic" }}>logon</span>{" "}
-            tuaj me kualitet!
-          </>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("services.gallery.qendisje-logosh.ctaTitle"),
+            }}
+          />
         }
         ctaHref="/contact"
       />
 
       <ShowcaseGallery
-        title="Kicele"
+        title={t("services.gallery.kicele.title")}
         subtitle={
-          <>
-            Te Fije për Pe, ofrojmë kicele për çdo lloj biznesi nga restorantet
-            te dyqanet, me mundësi
-            <br />
-            personalizimi sipas brendit tuaj, për një paraqitje profesionale dhe
-            unike.
-          </>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("services.gallery.kicele.subtitle").replace(
+                /\n/g,
+                "<br />"
+              ),
+            }}
+          />
         }
         moreHref="/services/kicele"
         images={[
@@ -193,27 +192,26 @@ const ServicesPage: React.FC = () => {
           "/images/catalogue/Frame%2069.svg",
         ]}
         ctaTitle={
-          <>
-            Personalizo{" "}
-            <span style={{ color: "#EF8C16", fontStyle: "italic" }}>
-              kicelën
-            </span>{" "}
-            për biznesin tënd!
-          </>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("services.gallery.kicele.ctaTitle"),
+            }}
+          />
         }
         ctaHref="/contact"
       />
 
       <ShowcaseGallery
-        title="Jelek"
+        title={t("services.gallery.jelek.title")}
         subtitle={
-          <>
-            Te Fije për Pe, jelekët tanë kombinojnë personalizimin, stilin unik
-            dhe materialet e forta
-            <br />
-            për një pamje profesionale që zgjat gjatë dhe përfaqëson brendin me
-            klas.
-          </>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("services.gallery.jelek.subtitle").replace(
+                /\n/g,
+                "<br />"
+              ),
+            }}
+          />
         }
         moreHref="/services/jelek"
         images={[
@@ -223,27 +221,26 @@ const ServicesPage: React.FC = () => {
           "/images/catalogue/Frame%2073.svg",
         ]}
         ctaTitle={
-          <>
-            Personalizo{" "}
-            <span style={{ color: "#EF8C16", fontStyle: "italic" }}>
-              jelekë
-            </span>{" "}
-            për biznesin tënd!
-          </>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("services.gallery.jelek.ctaTitle"),
+            }}
+          />
         }
         ctaHref="/contact"
       />
 
       <ShowcaseGallery
-        title="Këmishë"
+        title={t("services.gallery.kemishe.title")}
         subtitle={
-          <>
-            Ne Fije për Pe, ofrojmë këmisha të personalizuara për çdo lloj
-            biznesi, me stil unik,
-            <br />
-            materiale cilësore dhe qëndrueshmëri që përfaqësojnë brendin me
-            elegancë.
-          </>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("services.gallery.kemishe.subtitle").replace(
+                /\n/g,
+                "<br />"
+              ),
+            }}
+          />
         }
         moreHref="/services/kemishe"
         images={[
@@ -253,13 +250,11 @@ const ServicesPage: React.FC = () => {
           "/images/catalogue/Frame%2077.svg",
         ]}
         ctaTitle={
-          <>
-            Personalizo{" "}
-            <span style={{ color: "#EF8C16", fontStyle: "italic" }}>
-              këmishë
-            </span>{" "}
-            për biznesin tënd!
-          </>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("services.gallery.kemishe.ctaTitle"),
+            }}
+          />
         }
         ctaHref="/contact"
       />

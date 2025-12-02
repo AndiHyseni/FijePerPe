@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Button from "../shared/Button";
 import "./Catalogue.css";
 
@@ -11,11 +12,12 @@ const images = [
 ];
 
 const Catalogue: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section className="catalogue" aria-labelledby="catalogue-title">
       <div className="container">
         <h2 id="catalogue-title" className="catalogue__title">
-          Qepje me përkushtim në çdo detaj
+          {t("catalogue.title")}
         </h2>
         <div className="catalogue__grid">
           {images.map((img) => (
@@ -37,7 +39,7 @@ const Catalogue: React.FC = () => {
             size="lg"
             className="catalogue__btn"
           >
-            Shiko katalogun
+            {t("catalogue.viewCatalogue")}
             <svg
               width="18"
               height="18"

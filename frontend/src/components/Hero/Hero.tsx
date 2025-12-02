@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Button from "../shared/Button";
 import "./Hero.css";
 
@@ -12,10 +13,11 @@ type HeroProps = {
 
 const Hero: React.FC<HeroProps> = ({
   title,
-  ctaText = "Shiko shërbimet",
+  ctaText,
   onCtaClick,
   backgroundImageUrl = "/images/banner.svg",
 }) => {
+  const { t } = useTranslation();
   const style = backgroundImageUrl
     ? { backgroundImage: `url(${backgroundImageUrl})` }
     : undefined;
@@ -26,11 +28,11 @@ const Hero: React.FC<HeroProps> = ({
     <section id="home" className={heroClass} style={style}>
       <div className="hero__overlay" />
       <div className="container hero__content">
-        <span className="hero__eyebrow">FIJE PËR PE</span>
+        <span className="hero__eyebrow">{t("hero.eyebrow")}</span>
         <h1 className="hero__title">{title}</h1>
-        {ctaText ? (
+        {ctaText || t("hero.cta") ? (
           <Button variant="outline" size="lg" onClick={onCtaClick}>
-            <span className="cta-text">{ctaText}</span>
+            <span className="cta-text">{ctaText || t("hero.cta")}</span>
             <svg
               width="18"
               height="18"

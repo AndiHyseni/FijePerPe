@@ -1,11 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Businesses.css";
 
 const Businesses: React.FC = () => {
+  const { t } = useTranslation();
   return (
-    <section className="businesses" aria-label="Bizneset tona">
+    <section className="businesses" aria-label={t("businesses.title")}>
       <div className="container">
-        <h2 className="businesses__title">Për çdo brend, për çdo biznes</h2>
+        <h2 className="businesses__title">{t("businesses.title")}</h2>
         {/* Desktop: Single image */}
         <img
           src="/images/bizneset/Bizneset.svg"
